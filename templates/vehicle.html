@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vehicle | Carbon Footprint Calculator App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- <div style="background-color: #ccfcae;padding:5px;margin-bottom: 5px;">
+        <div class="container">
+            <h1>Carbon Footprint Calculator App</h1>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body"  data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Carbon Footprint Calculator</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link"  href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/vehicle">Vehicle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/credits">Credits/References for Data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <small>First Sem EIA project (Section 48)</small>
+        <br/>
+        <br/>
+        <form action="/v-calculate" method="post">
+          <h4>Vehicle Emissions</h4>
+          <select class="form-select form-select-lg mb-3" name="type" aria-label=".form-select-lg example">
+            <option selected>Select vehicle type</option>
+            <option value="0">none</option>
+            <option value="1">Scooter &lt;110CC</option>
+            <option value="2">Scooter &lt;150CC</option>
+            <option value="3">Motorcycle &lt;500CC</option>
+            <option value="4">Three Wheelers (Petrol)</option>
+            <option value="5">Three Wheelers (Diesel)</option>
+            <option value="6">Three Wheelers (CNG)</option>
+            <option value="7">Small Car (Petrol)</option>
+            <option value="8">Small Car (CNG)</option>
+            <option value="9">Small car (LPG)</option>
+            <option value="10">Hatchback (Petrol)</option>
+            <option value="11">Hatchback (Diesel)</option>
+            <option value="12">Sedan (Petrol)</option>
+            <option value="13">Sedan (Diesel)</option>
+            <option value="14">Compact SUV (Petrol)</option>
+            <option value="15">Gypsy (Petrol)</option>
+            <option value="16">SUV &lt;3000CC (Petrol)</option>
+            <option value="17">SUV &lt;3000CC (Diesel)</option>
+            <option value="18">Premium Sedan &lt;3000CC (Petrol)</option>
+            <option value="19">Premium Sedan &lt;3000CC (Diesel)</option>
+          </select>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Kms Travelled</label>
+            <input type="number" name="kms" min="0" class="form-control" id="formGroupExampleInput2"  placeholder="in Kilometers">
+          </div>
+          <input type="submit" name="submit" class="btn btn-primary" />
+      </form>
+      <br/>
+  <div style="border-radius: 5px;background-color: lightgray; padding: 25px;">
+    <h3>Your Total Co2 Emissions</h3>
+    <h1>Approx. {{emissions}} kgs/month</h1>
+    </div>
+<br/>
+<br/>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
